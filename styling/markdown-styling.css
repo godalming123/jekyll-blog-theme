@@ -2,7 +2,7 @@
 
 blockquote {
   position: relative;
-  margin-top: 1em;
+  margin-top: 1em !important;
 }
 
 blockquote::before {
