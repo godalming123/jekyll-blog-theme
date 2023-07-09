@@ -2,7 +2,7 @@
 A simple from-scratch blog that doesn't need any JS, is extremely fast and has a bold design.
 ## TODO:
  - add coloring to code blocks
- - their should be sections to catogarize posts
+ - there should be sections to categorize posts
  - small refinements in the design, typography, ETC:
     - tables need better styling
  - a full screen image view (requires JS)

@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "Hello world post"
-date:   2023-07-01
 description: "This is a simple example post to test stuff"
 ---
 # An h1 header
