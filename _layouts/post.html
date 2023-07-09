@@ -18,7 +18,7 @@
   </head>
   <body>
     <article>
-      <p>{{ page.date | date: "%-d %B %Y" }}{% if post.category %} ⬤ {{ post.category }}{% endif %}</p>
+      <p>{{ page.date | date: "%-d %B %Y" }}{% if post.categories %} ⬤ {{ post.categories[0] }}{% endif %}</p>
       <h1 class="main-title">{{ page.title }}</h1>
       {% if page.frontImage %}
         <img src="{{ page.frontImage | relative_url }}" style="display: block;" />
