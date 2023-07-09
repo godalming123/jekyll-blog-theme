@@ -8,6 +8,13 @@ title: "Example blog"
 description: "Add a short descriptino of your blog here"
 icon: "(Optional) add a path to an icon here"
 ```
+Then add the following
+`index.html`
+```html
+---
+layout: home
+---
+```
 ## TODO:
  - add coloring to code blocks
  - small refinements in the design, typography, ETC:
