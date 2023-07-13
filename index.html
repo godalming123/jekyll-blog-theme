@@ -56,7 +56,7 @@
       <div class="grid">
         {% for post in category[1] %}
           <a href="{{ post.url | relative_url }}" class="card">
-            <p>{{ post.date | date: "%-d %B %Y" }}{% for category in page.categories %} ⬤ <a href="{{ "/#" | relative_url | append: category | replace: " ", "-" }}">{{ category }}</a>{% endfor %}</p>
+            <p>{{ post.date | date: "%-d %B %Y" }}{% for category in post.categories %} ⬤ <a href="{{ "#" | append: category | replace: " ", "-" }}">{{ category }}</a>{% endfor %}</p>
             <h3>{{ post.title }}</h3>
             {% if post.frontImage %}
               <img src="{{ post.frontImage | relative_url }}" style="display: block;" />
