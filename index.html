@@ -24,12 +24,23 @@
 }
 
 .card {
+  position: relative;
   background-color: var(--card-color);
   transition: 250ms;
   border-radius: 0.5rem;
   padding: 0.5rem;
   color: var(--fg-color);
   text-decoration: none;
+}
+
+.card > a {
+  position: absolute;
+  z-index: 10;
+  color: transparent;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .card:hover {
@@ -55,7 +66,7 @@
       <h2 id="{{ category[0] | replace: " ", "-" }}">{{ category[0] }}</h2>
       <div class="grid">
         {% for post in category[1] %}
-          <a href="{{ post.url | relative_url }}" class="card">
+        <div class="card">
             <p>{{ post.date | date: "%-d %B %Y" }}{% for category in post.categories %} ⬤ <a href="{{ "#" | append: category | replace: " ", "-" }}">{{ category }}</a>{% endfor %}</p>
             <h3>{{ post.title }}</h3>
             {% if post.frontImage %}
@@ -64,7 +75,8 @@
             {% if post.description %}
               <p>{{ post.description }}</p>
             {% endif %}
-          </a>
+            <a href="{{ post.url | relative_url }}">Open the post -></a>
+          </div>
         {% endfor %}
       </div>
     {% endfor %}
