@@ -20,6 +20,7 @@
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   grid-template-rows: masonry;
   grid-gap: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .card {
@@ -51,13 +52,11 @@
       <p>{{ site.description }}</p>
     {% endif %}
     {% for category in site.categories %}
-      <h2>{{ category[0] }}</h2>
+      <h2 id="{{ category[0] | replace: " ", "-" }}">{{ category[0] }}</h2>
       <div class="grid">
         {% for post in category[1] %}
           <a href="{{ post.url | relative_url }}" class="card">
-            {% if post.date %}
-              <p>{{ post.date | date: "%-d %B %Y" }}</p>
-            {% endif %}
+            <p>{{ post.date | date: "%-d %B %Y" }}{% for category in page.categories %} ⬤ <a href="{{ "/#" | relative_url | append: category | replace: " ", "-" }}">{{ category }}</a>{% endfor %}</p>
             <h3>{{ post.title }}</h3>
             {% if post.frontImage %}
               <img src="{{ post.frontImage | relative_url }}" style="display: block;" />
