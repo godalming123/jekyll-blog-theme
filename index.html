@@ -15,11 +15,15 @@
     <link rel="stylesheet" href="{{ "/styling/colors.css"     | relative_url }}">
     <link rel="stylesheet" href="{{ "/styling/typography.css" | relative_url }}">
     <style>
+body {
+  margin-bottom: 90vh;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   grid-template-rows: masonry;
-  grid-gap: 1rem;
+  grid-gap: 0.5rem;
   margin-bottom: 0.5rem;
 }
 
@@ -50,7 +54,7 @@
 
 .card:hover {
   background-color: var(--card-hover-color);
-  transform: translate(0, -0.25rem);
+  transform: translate(0, -0.1rem);
 }
 
 .card > * {
