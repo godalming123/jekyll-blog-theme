@@ -5,8 +5,9 @@ You can preview the theme [here](https://godalming123.github.io/jekyll-blog/), t
 Assuming that you already have jekyll setup, copy over all of the files from the theme (except for readme.md), and add the following to the `_config.yml` file:
 ```yaml
 title: "Some title"
-description: "Add a description here"
-icon: "Add a path to an icon in here"
+description: "optional: Add a description here"
+icon: "optional: Add a path to an icon in here"
+front-icon: "optional: add an inage"
 ```
 Then create your posts for example `category_of_post/_posts/2023-06-23-example-post`:
 ```markdown

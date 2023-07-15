@@ -67,6 +67,9 @@ html {
     </style>
   </head>
   <body>
+    {% if site.front-icon %}
+      <img src="{{ site.front-icon }}">
+    {% endif %}
     <h1 class="main-title">{{ site.title }}</h1>
     {% if site.description %}
       <p>{{ site.description }}</p>
