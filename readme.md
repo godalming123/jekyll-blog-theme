@@ -1,6 +1,6 @@
 # jekyll-blog-theme
 A jekyll theme for creating blogs with categorys. It doesn't need any JS, is extremely fast and has a bold design.
-You can preview the theme [here](https://godalming123.github.io/jekyll-blog/), the source code is also [here](https://github.com/godalming123/jekyll-blog).
+You can preview the theme [here](https://godalming123.github.io/jekyll-blog/), the source code for this preview is available [here](https://github.com/godalming123/jekyll-blog).
 ## Usage
 Assuming that you already have jekyll setup, copy over all of the files from the theme (except for readme.md), and add the following to the `_config.yml` file:
 ```yaml
